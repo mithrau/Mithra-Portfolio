@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mithra U — Software Engineer &amp; Web Developer</title>
+  <meta name="description" content="Portfolio of Mithra U — Computer Science Engineering student, software engineer, web developer and UI designer." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== LOADING SCREEN ===================== -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <div class="loader-logo">MU</div>
+      <p class="loader-text">initializing<span class="dots"><span>.</span><span>.</span><span>.</span></span></p>
+    </div>
+  </div>
+
+  <!-- ===================== BACKGROUND LAYERS ===================== -->
+  <div class="aurora-bg" aria-hidden="true">
+    <div class="aurora-blob blob-1"></div>
+    <div class="aurora-blob blob-2"></div>
+    <div class="aurora-blob blob-3"></div>
+    <div class="grain"></div>
+  </div>
+
+  <!-- Signature element: canvas constellation network reacting to cursor -->
+  <canvas id="constellation" aria-hidden="true"></canvas>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar" id="scrollBar"></div></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-mark">M<span>U</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-nav>Home</a></li>
+        <li><a href="#about" class="nav-link" data-nav>About</a></li>
+        <li><a href="#skills" class="nav-link" data-nav>Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-nav>Projects</a></li>
+        <li><a href="#education" class="nav-link" data-nav>Education</a></li>
+        <li><a href="#achievements" class="nav-link" data-nav>Achievements</a></li>
+        <li><a href="#contact" class="nav-link" data-nav>Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+        <div class="hero-text" data-aos="fade-right" data-aos-duration="900">
+          <p class="hero-greet">Hi <span class="wave">👋</span></p>
+          <h1 class="hero-name">I'm <span class="gradient-text">Mithra U</span></h1>
+          <p class="hero-role">Computer Science Engineering Student</p>
+ <h1>
+            <h3 id="typing"></h3>
+
+            <h4>
+                Ramco Institute of Technology
+            </h4>
+
+            <p class="tagline">
+                "Learning. Creating. Growing."
+            </p>
+
+            <p class="about">
+                I am Mithra U, a passionate II B.E Computer Science student at
+                Ramco Institute of Technology. I enjoy creating responsive and
+                user-friendly websites while continuously exploring emerging
+                technologies such as Cyber Security and Cloud Computing.
+                I believe every project is an opportunity to learn something new
+                and improve my problem-solving skills. My goal is to become a
+                Software Engineer who develops meaningful digital solutions that
+                create real-world impact. I am a creative thinker, quick learner,
+                and passionate developer who enjoys turning ideas into reality
+                through clean and efficient code.
+            </p>
+
+            <div class="buttons">
+
+                <a href="https://www.linkedin.com/in/mithra-uma-sankar-41bb6b378" target="_blank" class="linkedin">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+
+            </div>
+
+          <div class="hero-typed-wrap">
+            <span class="typed-prefix">I'm a</span>
+            <span id="typed"></span><span class="typed-cursor" aria-hidden="true">|</span>
+          </div>
+
+          <div class="hero-badges">
+            <span class="badge"><i class="fa-solid fa-code"></i>Software Engineer</span>
+            <span class="badge"><i class="fa-solid fa-laptop-code"></i>Web Developer</span>
+            <span class="badge"><i class="fa-brands fa-java"></i>Java Programmer</span>
+            <span class="badge"><i class="fa-solid fa-pen-ruler"></i>UI Designer</span>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary ripple">
+              <i class="fa-solid fa-paper-plane"></i> Hire Me
+            </a>
+            <a href="#" class="btn btn-glass ripple" id="resumeBtn" download>
+              <i class="fa-solid fa-download"></i> Download Resume
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-aos="fade-left" data-aos-duration="900">
+          <div class="orbit-wrap">
+            <div class="orbit orbit-1"><i class="fa-brands fa-html5"></i></div>
+            <div class="orbit orbit-2"><i class="fa-brands fa-css3-alt"></i></div>
+            <div class="orbit orbit-3"><i class="fa-brands fa-js"></i></div>
+            <div class="orbit orbit-4"><i class="fa-brands fa-java"></i></div>
+            <div class="orbit orbit-5"><i class="fa-brands fa-git-alt"></i></div>
+            <div class="orbit orbit-6"><i class="fa-solid fa-cloud"></i></div>
+
+            <div class="profile-ring">
+              <div class="profile-glow"></div>
+              <div class="profile-photo">
+                <span>MU</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll down">
+        <span></span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="section about">
+      <div class="section-head" data-aos="fade-up">
+        <p class="eyebrow">About</p>
+        <h2>Getting to know me</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-illustration" data-aos="fade-right">
+          <div class="glass-card illustration-card">
+            <svg viewBox="0 0 400 400" class="about-svg" role="img" aria-label="Illustration of a developer at a desk">
+              <defs>
+                <linearGradient id="gradA" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#7B2FF7"/>
+                  <stop offset="50%" stop-color="#F107A3"/>
+                  <stop offset="100%" stop-color="#5EFCE8"/>
+                </linearGradient>
+              </defs>
+              <circle cx="200" cy="200" r="150" fill="url(#gradA)" opacity="0.12"/>
+              <rect x="90" y="220" width="220" height="14" rx="7" fill="url(#gradA)" opacity="0.5"/>
+              <rect x="120" y="120" width="160" height="110" rx="14" fill="none" stroke="url(#gradA)" stroke-width="4"/>
+              <rect x="132" y="132" width="136" height="70" rx="6" fill="url(#gradA)" opacity="0.18"/>
+              <path d="M150 155 L165 170 L150 185" stroke="#5EFCE8" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="178" y1="185" x2="210" y2="185" stroke="#F107A3" stroke-width="5" stroke-linecap="round"/>
+              <circle cx="200" cy="90" r="26" fill="url(#gradA)" opacity="0.8"/>
+              <rect x="170" y="118" width="60" height="60" rx="18" fill="url(#gradA)" opacity="0.55"/>
+              <circle cx="90" cy="110" r="8" fill="#5EFCE8"/>
+              <circle cx="320" cy="130" r="6" fill="#F107A3"/>
+              <circle cx="310" cy="270" r="10" fill="#7B2FF7"/>
+              <circle cx="80" cy="270" r="6" fill="#00DBDE"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="about-content" data-aos="fade-left">
+          <div class="glass-card about-card">
+            <p class="about-hello">Hello!</p>
+            <p class="about-lead">I'm <strong>Mithra U</strong>, a Computer Science Engineering student passionate about creating modern websites, Java applications, and elegant user interfaces.</p>
+            <p>I enjoy solving real-world problems through technology and continuously learning new skills.</p>
+
+            <h3 class="learning-title">Currently Learning</h3>
+            <div class="learning-tags">
+              <span><i class="fa-brands fa-java"></i>Java</span>
+              <span><i class="fa-brands fa-html5"></i>HTML</span>
+              <span><i class="fa-brands fa-css3-alt"></i>CSS</span>
+              <span><i class="fa-brands fa-js"></i>JavaScript</span>
+              <span><i class="fa-solid fa-c"></i>C</span>
+              <span><i class="fa-solid fa-plus"></i>C++</span>
+              <span><i class="fa-solid fa-cloud"></i>Cloud Computing</span>
+              <span><i class="fa-brands fa-git-alt"></i>Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="section skills">
+      <div class="section-head" data-aos="fade-up">
+        <p class="eyebrow">Skills</p>
+        <h2>What I work with</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card glass-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="skill-top"><i class="fa-brands fa-html5"></i><span>HTML</span><b>95%</b></div>
+          <div class="skill-bar"><div class="skill-fill" data-value="95"></div></div>
+        </div>
+        <div class="skill-card glass-card" data-aos="fade-up" data-aos-delay="50">
+          <div class="skill-top"><i class="fa-brands fa-css3-alt"></i><span>CSS</span><b>90%</b></div>
+          <div class="skill-bar"><div class="skill-fill" data-value="90"></div></div>
+        </div>
+        <div class="skill-card glass-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-top"><i class="fa-brands fa-java"></i><span>Java</span><b>88%</b></div>
+          <div class="skill-bar"><div class="skill-fill" data-value="88"></div></div>
+        </div>
+        <div class="skill-card glass-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="skill-top"><i class="fa-brands fa-js"></i><span>JavaScript</span><b>82%</b></div>
+          <div class="skill-bar"><div class="skill-fill" data-value="82"></div></div>
+        </div>
+        <div class="skill-card glass-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-top"><i class="fa-solid fa-c"></i><span>C</span><b>85%</b></div>
+          <div class="skill-bar"><div class="skill-fill" data-value="85"></div></div>
+        </div>
+        <div class="skill-card glass-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="skill-top"><i class="fa-solid fa-plus"></i><span>C++</span><b>85%</b></div>
+          <div class="skill-bar"><div class="skill-fill" data-value="85"></div></div>
+        </div>
+        <div class="skill-card glass-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="skill-top"><i class="fa-solid fa-cloud"></i><span>Cloud Computing</span><b>75%</b></div>
+          <div class="skill-bar"><div class="skill-fill" data-value="75"></div></div>
+        </div>
+        <div class="skill-card glass-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="skill-top"><i class="fa-brands fa-git-alt"></i><span>Git &amp; GitHub</span><b>80%</b></div>
+          <div class="skill-bar"><div class="skill-fill" data-value="80"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects" class="section projects">
+      <div class="section-head" data-aos="fade-up">
+        <p class="eyebrow">Projects</p>
+        <h2>Things I've built</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card glass-card tilt" data-aos="fade-up">
+          <div class="project-media proj-1"><i class="fa-solid fa-globe"></i></div>
+          <div class="project-body">
+            <h3>Personal Portfolio Website</h3>
+            <p>Modern responsive portfolio with premium animations.</p>
+            <div class="tech-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="proj-btn proj-btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card tilt" data-aos="fade-up" data-aos-delay="80">
+          <div class="project-media proj-2"><i class="fa-solid fa-traffic-light"></i></div>
+          <div class="project-body">
+            <h3>Smart Traffic Monitoring System</h3>
+            <p>Vehicle detection, automated signal control and emergency vehicle prioritization.</p>
+            <ul class="feature-list">
+              <li>Vehicle Detection</li>
+              <li>Traffic Signal Automation</li>
+              <li>Emergency Vehicle Detection</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Python</span><span>OpenCV</span><span>Machine Learning</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="proj-btn proj-btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card tilt" data-aos="fade-up" data-aos-delay="160">
+          <div class="project-media proj-3"><i class="fa-solid fa-brain"></i></div>
+          <div class="project-body">
+            <h3>MindMeter AI</h3>
+            <p>AI-powered stress level monitoring website with charts and personalized recommendations.</p>
+            <div class="tech-tags">
+              <span>AI</span><span>Charts</span><span>Web App</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="proj-btn proj-btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card tilt" data-aos="fade-up" data-aos-delay="240">
+          <div class="project-media proj-4"><i class="fa-solid fa-temperature-high"></i></div>
+          <div class="project-body">
+            <h3>Smart Fabric Detecting Iron</h3>
+            <p>Arduino-based intelligent iron that automatically detects fabric type and adjusts temperature.</p>
+            <div class="tech-tags">
+              <span>Arduino</span><span>Embedded C</span><span>Sensors</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="proj-btn proj-btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section id="education" class="section education">
+      <div class="section-head" data-aos="fade-up">
+        <p class="eyebrow">Education</p>
+        <h2>My journey so far</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-tag">Foundation</span>
+            <h3>Higher Secondary Education</h3>
+            <p>Built a strong foundation in mathematics and computer science that sparked my interest in engineering.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="80">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-tag">Undergraduate</span>
+            <h3>Bachelor of Engineering — Computer Science &amp; Engineering</h3>
+            <p>Deepening my knowledge of programming, systems, and software design through coursework and hands-on practice.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="160">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-tag">Practice</span>
+            <h3>Technical Projects</h3>
+            <p>Applying concepts to real builds — from AI-powered tools to embedded systems and full-stack web apps.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="240">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-tag">Ahead</span>
+            <h3>Future Goal — Software Engineer</h3>
+            <p>Working toward a career building impactful, elegant software at scale.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ACHIEVEMENTS ===================== -->
+    <section id="achievements" class="section achievements">
+      <div class="section-head" data-aos="fade-up">
+        <p class="eyebrow">Achievements</p>
+        <h2>Milestones so far</h2>
+      </div>
+
+      <div class="counters-grid">
+        <div class="counter-card glass-card" data-aos="zoom-in">
+          <span class="counter" data-target="5">0</span><span class="counter-suffix">+</span>
+          <p>Projects</p>
+        </div>
+        <div class="counter-card glass-card" data-aos="zoom-in" data-aos-delay="80">
+          <span class="counter" data-target="20">0</span><span class="counter-suffix">+</span>
+          <p>Certificates</p>
+        </div>
+        <div class="counter-card glass-card" data-aos="zoom-in" data-aos-delay="160">
+          <span class="counter" data-target="10">0</span><span class="counter-suffix">+</span>
+          <p>Technical Events</p>
+        </div>
+        <div class="counter-card glass-card" data-aos="zoom-in" data-aos-delay="240">
+          <span class="counter" data-target="100">0</span><span class="counter-suffix">%</span>
+          <p>Dedication</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="section contact">
+      <div class="section-head" data-aos="fade-up">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's build something together</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="glass-card contact-info" data-aos="fade-right">
+          <ul>
+            <li><i class="fa-solid fa-envelope"></i><div><span>Email</span><a href="mailto:mithvar4@gmail.com">mithvar4@gmail.com</a></div></li>
+            <li><i class="fa-solid fa-phone"></i><div><span>Phone</span><a href="tel:+918015214916">+918015214916</a></div></li>
+            <li><i class="fa-solid fa-location-dot"></i><div><span>Location</span><p>Tamil Nadu, India</p></div></li>
+          </ul>
+          <div class="contact-socials">
+            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <form class="glass-card contact-form" id="contactForm" data-aos="fade-left">
+          <div class="form-row">
+            <div class="form-field">
+              <input type="text" id="name" name="name" required placeholder=" " />
+              <label for="name">Name</label>
+            </div>
+            <div class="form-field">
+              <input type="email" id="email" name="email" required placeholder=" " />
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="form-field">
+            <input type="text" id="subject" name="subject" required placeholder=" " />
+            <label for="subject">Subject</label>
+          </div>
+          <div class="form-field">
+            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+            <label for="message">Message</label>
+          </div>
+          <button type="submit" class="btn btn-primary ripple full-width">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <p>Made with <i class="fa-solid fa-heart"></i> by Mithra U</p>
+    <p>&copy; 2026 Mithra U. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button id="scrollTopBtn" class="scroll-top" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
